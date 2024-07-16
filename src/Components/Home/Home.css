@@ -1,0 +1,60 @@
+.home-container {
+ font-family: "Nunito", sans-serif;
+ font-optical-sizing: auto;
+ font-weight: bold;
+ font-style: normal;
+
+ .home-list {
+  margin: 0 auto;
+  margin-top: 100px;
+  list-style-type: none;
+  width: 80%;
+
+  .search-container {
+
+   .search-input {
+    width: 200px;
+    margin-right: 15px;
+    border: none;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    color: #2d3d54
+   }
+
+   input:focus {
+    outline: none;
+    border: 2px solid #537787;
+   }
+
+   .search-bttn {
+    width: 100px;
+   }
+  }
+
+  li {
+
+   button {
+    background-color: #537787;
+    /* background-color: #bfcfdc; */
+    height: 40px;
+    width: 350px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 30px;
+    color: whitesmoke;
+
+   }
+
+   button:hover {
+    background-color: #bfcfdc;
+    cursor: pointer;
+    color: #2d3d54;
+   }
+
+  }
+
+ }
+
+}
