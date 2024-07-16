@@ -1,0 +1,8 @@
+.header-container {
+ padding-top: 25px;
+
+ img {
+  height: 60px;
+  filter: invert(19%) sepia(44%) saturate(527%) hue-rotate(174deg) brightness(93%) contrast(87%);
+ }
+}
