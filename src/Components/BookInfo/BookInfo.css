@@ -1,0 +1,26 @@
+.book-info-main-container {
+ color: #2d3d54;
+
+ ul {
+  list-style-type: none;
+ }
+
+ .book-info-contents-container {
+
+  .book-container {
+   background-color: whitesmoke;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   width: 80%;
+   margin: 0 auto;
+
+   img {
+    height: 350px;
+    margin-right: 100px;
+    /* filter: invert(20%) sepia(33%) saturate(642%) hue-rotate(176deg) brightness(96%) contrast(90%); */
+    filter: invert(44%) sepia(19%) saturate(677%) hue-rotate(153deg) brightness(96%) contrast(90%);
+   }
+  }
+ }
+}
