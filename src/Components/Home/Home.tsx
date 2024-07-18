@@ -23,7 +23,10 @@ export default function Home() {
      </Link>
     </li>
     <li>
-     <button>Add New Book</button>
+     <Link to='/add-book'>
+      <button>Add New Book</button>
+     </Link>
+
     </li>
    </ul>
 

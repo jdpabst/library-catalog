@@ -1,0 +1,27 @@
+.add-book-main-container {
+ color: #2d3d54;
+
+ .add-book-info-container {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+
+  img {
+   height: 350px;
+   margin-right: 100px;
+   filter: invert(44%) sepia(19%) saturate(677%) hue-rotate(153deg) brightness(96%) contrast(90%);
+  }
+
+  .add-book-info {
+   display: flex;
+   flex-direction: column;
+
+   input {
+    margin-bottom: 20px;
+   }
+  }
+ }
+}
