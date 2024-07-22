@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './BookInfo.css';
 
 export default function BookInfo() {
@@ -17,7 +18,9 @@ export default function BookInfo() {
         <p># available</p>
         <p>Summary</p>
        </div>
-       <button className='edit-button'>Edit Book</button>
+       <Link to='/edit-book'>
+        <button className='edit-button'>Edit Book</button>
+       </Link>
       </div>
      </li>
     </ul>

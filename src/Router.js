@@ -6,6 +6,7 @@ import {
 import AddBook from "./Components/AddBook/AddBook.tsx";
 import BookInfo from "./Components/BookInfo/BookInfo.tsx";
 import Catalog from "./Components/Catalog/Catalog.tsx";
+import EditBook from "./Components/EditBook/EditBook.tsx";
 import Home from "./Components/Home/Home.tsx";
 
 function NavRoutes() {
@@ -32,6 +33,10 @@ function NavRoutes() {
     path='/add-book'
     element={<AddBook />}
    />
+
+   <Route
+    path='/edit-book'
+    element={<EditBook />} />
 
   </Routes>
 
