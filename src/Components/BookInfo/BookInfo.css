@@ -8,6 +8,7 @@
  .book-info-contents-container {
 
   .book-container {
+   position: relative;
    background-color: whitesmoke;
    border-radius: 20px;
    display: flex;
@@ -21,6 +22,24 @@
     /* filter: invert(20%) sepia(33%) saturate(642%) hue-rotate(176deg) brightness(96%) contrast(90%); */
     filter: invert(44%) sepia(19%) saturate(677%) hue-rotate(153deg) brightness(96%) contrast(90%);
    }
+  }
+
+  .edit-button {
+   position: absolute;
+   right: 40px;
+   bottom: 20px;
+   height: 30px;
+   width: 100px;
+   border-radius: 20px;
+   border: none;
+   color: whitesmoke;
+   background-color: #537787;
+  }
+
+  button:hover {
+   cursor: pointer;
+   background-color: #bfcfdc;
+   color: #2d3d54;
   }
  }
 }

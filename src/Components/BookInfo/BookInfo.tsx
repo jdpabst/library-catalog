@@ -17,6 +17,7 @@ export default function BookInfo() {
         <p># available</p>
         <p>Summary</p>
        </div>
+       <button className='edit-button'>Edit Book</button>
       </div>
      </li>
     </ul>

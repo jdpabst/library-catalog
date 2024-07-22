@@ -6,13 +6,14 @@ export default function AddBook() {
   <div className='add-book-main-container'>
    <div className='add-book-info-container'>
     <img src='/assets/book-placeholder.svg' />
-    <div className='add-book-info'>
+    <form className='add-book-info'>
      <input placeholder='Title' />
      <input placeholder='Author' />
-     <input placeholder='# available' />
-     <input placeholder='Book Summary' />
-     <input placeholder='cover photo URL' />
-    </div>
+     <input placeholder='# Available' />
+     <input placeholder='Cover Photo URL' />
+     <input className='summary-input' placeholder='Book Summary' />
+     <button>Add Book</button>
+    </form>
    </div>
   </div>
  )
