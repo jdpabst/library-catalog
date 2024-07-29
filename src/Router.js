@@ -1,6 +1,6 @@
 import {
- Route,
- Routes
+  Route,
+  Routes
 } from "react-router-dom";
 
 import AddBook from "./Components/AddBook/AddBook.tsx";
@@ -10,37 +10,37 @@ import EditBook from "./Components/EditBook/EditBook.tsx";
 import Home from "./Components/Home/Home.tsx";
 
 function NavRoutes() {
- return (
-  <Routes>
+  return (
+    <Routes>
 
-   <Route
-    exact
-    path="/"
-    element={<Home />}
-   />
+      <Route
+        exact
+        path="/"
+        element={<Home />}
+      />
 
-   <Route
-    path='/catalog'
-    element={<Catalog />}
-   />
+      <Route
+        path='/catalog'
+        element={<Catalog />}
+      />
 
-   <Route
-    path='/book-info'
-    element={<BookInfo />}
-   />
+      <Route
+        path='/book-info/:id'
+        element={<BookInfo />}
+      />
 
-   <Route
-    path='/add-book'
-    element={<AddBook />}
-   />
+      <Route
+        path='/add-book'
+        element={<AddBook />}
+      />
 
-   <Route
-    path='/edit-book'
-    element={<EditBook />} />
+      <Route
+        path='/edit-book'
+        element={<EditBook />} />
 
-  </Routes>
+    </Routes>
 
- )
+  )
 }
 
 export default NavRoutes;
