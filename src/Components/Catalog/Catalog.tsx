@@ -9,8 +9,6 @@ export default function Catalog() {
  const userContext = useUserContext();
  const books: Book[] = userContext.state.catalog;
 
- console.log(books);
-
  return (
   <div className='catalog-main-container'>
    <ul>

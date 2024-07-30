@@ -35,7 +35,7 @@ function NavRoutes() {
       />
 
       <Route
-        path='/edit-book'
+        path='/edit-book/:id'
         element={<EditBook />} />
 
     </Routes>

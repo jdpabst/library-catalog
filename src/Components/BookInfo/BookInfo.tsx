@@ -24,6 +24,7 @@ export default function BookInfo() {
   return <div>Book not Found</div>
  }
 
+
  return (
 
   <div className='book-info-main-container'>
@@ -38,9 +39,11 @@ export default function BookInfo() {
         <p className='highlighted-text'>Available Copies: {book.available}</p>
         <p>{book.summary}</p>
        </div>
-       <Link to='/edit-book'>
-        <button className='edit-button'>Edit Book</button>
-       </Link>
+       {book && ( // Ensure book is not null before rendering the Link component
+        <Link to={`/edit-book/${book.id}`}>
+         <button className='edit-button'>Edit Book</button>
+        </Link>
+       )}
       </div>
      </li>
     </ul>
