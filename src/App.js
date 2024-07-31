@@ -4,23 +4,23 @@ import './App.css';
 import Footer from './Components/Footer/Footer.tsx';
 import Header from './Components/Header/Header.tsx';
 import NavRoutes from './Router';
-import { useUserContext, userActions } from './context';
+import { useUserContext } from './context';
 
 
 
 function App() {
+  const { setCatalog } = useUserContext();
 
-  const userContext = useUserContext();
+
 
   useEffect(() => {
     getBooks();
-  })
+  }, [])
 
   async function getBooks() {
     const bookResults = await axios.get('http://localhost:3001/catalog')
-    // console.log(bookResults)
 
-    userContext.dispatch({ type: userActions.SET_CATALOG, value: bookResults.data })
+    setCatalog(bookResults.data)
   }
 
 
