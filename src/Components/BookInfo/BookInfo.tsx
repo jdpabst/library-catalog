@@ -29,9 +29,14 @@ export default function BookInfo() {
         <p>{selectedBook.summary}</p>
        </div>
 
-       <Link to={`/edit-book/${selectedBook.id}`}>
-        <button className='edit-button'>Edit Book</button>
-       </Link>
+       <div className='book-info-bttns'>
+        <Link to={`/edit-book/${selectedBook.id}`}>
+         <button className='edit-button'>Edit Book</button>
+        </Link>
+        <Link to='/catalog' >
+         <button className='edit-button'>Back to Catalog</button>
+        </Link>
+       </div>
 
       </div>
      </li>

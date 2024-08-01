@@ -1,11 +1,15 @@
 .book-info-main-container {
  color: #2d3d54;
+ height: auto;
+ background-color: #eae7e2;
+ padding-bottom: 50px;
 
  ul {
   list-style-type: none;
  }
 
  .book-info-contents-container {
+  padding-top: 10px;
 
   .book-container {
    position: relative;
@@ -36,22 +40,32 @@
    }
   }
 
-  .edit-button {
+  .book-info-bttns {
    position: absolute;
    right: 40px;
    bottom: 20px;
-   height: 30px;
-   width: 100px;
-   border-radius: 20px;
-   border: none;
-   color: whitesmoke;
-   background-color: #537787;
+   height: 50px;
+   width: 350px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+
+   .edit-button {
+
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    border: none;
+    color: whitesmoke;
+    background-color: #537787;
+   }
+
+   button:hover {
+    cursor: pointer;
+    background-color: #bfcfdc;
+    color: #2d3d54;
+   }
   }
 
-  button:hover {
-   cursor: pointer;
-   background-color: #bfcfdc;
-   color: #2d3d54;
-  }
  }
 }

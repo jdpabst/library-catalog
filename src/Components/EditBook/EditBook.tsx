@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useUserContext } from "../../context";
 import { useSelectedBookFromURL } from '../../hooks';
 import './EditBook.css';
@@ -7,28 +8,22 @@ import './EditBook.css';
 
 export default function EditBook() {
  useSelectedBookFromURL();
- const { selectedBook, setSelectedBook } = useUserContext();
+ const { selectedBook, setSelectedBook, updateBookInCatalog } = useUserContext();
  const [title, setTitle] = useState(selectedBook?.title);
  const [author, setAuthor] = useState(selectedBook?.author);
  const [available, setAvailable] = useState(selectedBook?.available);
  const [summary, setSummary] = useState(selectedBook?.summary);
  const [cover, setCover] = useState(selectedBook?.cover);
 
- // useEffect(() => {
- //  if (selectedBook) {
- //   setTitle(selectedBook.title);
- //   setAuthor(selectedBook.author);
- //   setAvailable(selectedBook.available);
- //   setSummary(selectedBook.summary);
- //   setCover(selectedBook.cover);
- //  }
- // }, [selectedBook]);
+ const navigate = useNavigate();
+
 
  if (!selectedBook) {
   return <div> Book Not Found</div>
  }
 
  async function editBook() {
+
   try {
    const response = await axios.put(`http://localhost:3001/catalog/${selectedBook.id}`, {
     title,
@@ -38,11 +33,16 @@ export default function EditBook() {
     cover
    });
    console.log(`Book updated: ${response.data}`);
-   setSelectedBook(response.data); // Ensure this updates the selectedBook state
+   updateBookInCatalog(response.data);
+   setSelectedBook(response.data);
+
+   navigate(`/book-info/${selectedBook.id}`)
+
   } catch (err) {
    console.log(`Error updating book: ${err}`)
   }
  }
+
 
 
 
@@ -87,7 +87,11 @@ export default function EditBook() {
        placeholder='Book Summary'
       />
       {/* save to backend */}
-      <button type='submit'>Save</button>
+      <div className='edit-bttns-container'>
+       <button type='submit'>Save</button>
+       <Link to={`/book-info/${selectedBook.id}`}><button>Cancel</button></Link>
+      </div>
+
      </form>
     </div>
    </div>
