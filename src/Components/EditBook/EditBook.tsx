@@ -8,7 +8,7 @@ import './EditBook.css';
 
 export default function EditBook() {
  useSelectedBookFromURL();
- const { selectedBook, setSelectedBook, updateBookInCatalog } = useUserContext();
+ const { selectedBook, setSelectedBook, updateBookInCatalog, deleteBookFromCatalog } = useUserContext();
  const [title, setTitle] = useState(selectedBook?.title);
  const [author, setAuthor] = useState(selectedBook?.author);
  const [available, setAvailable] = useState(selectedBook?.available);
@@ -20,6 +20,18 @@ export default function EditBook() {
 
  if (!selectedBook) {
   return <div> Book Not Found</div>
+ }
+
+ async function deleteBook() {
+  try {
+   await axios.delete(`http://localhost:3001/catalog/${selectedBook.id}`);
+
+   deleteBookFromCatalog(selectedBook.id);
+   navigate('/catalog')
+
+  } catch (err) {
+   console.log(`Error deleting book: ${err}`)
+  }
  }
 
  async function editBook() {
@@ -50,6 +62,7 @@ export default function EditBook() {
   <div>
    <div className='edit-book-main-container'>
     <div className='edit-book-info-container'>
+     <button className='delete-bttn' onClick={deleteBook}>Delete</button>
      <img src={cover} />
      <form className='edit-book-info' onSubmit={e => {
       e.preventDefault();

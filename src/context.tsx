@@ -20,8 +20,14 @@ export const UserStore = ({ children }) => {
     )
   };
 
+  const deleteBookFromCatalog = (deletedBookId) => {
+    setCatalog((prevCatalog) =>
+      prevCatalog.filter((book) => book.id !== deletedBookId)
+    );
+  };
+
   return (
-    <UserContext.Provider value={{ catalog, setCatalog, selectedBook, setSelectedBook, updateBookInCatalog, addBookToCatalog }}>
+    <UserContext.Provider value={{ catalog, setCatalog, selectedBook, setSelectedBook, updateBookInCatalog, addBookToCatalog, deleteBookFromCatalog }}>
       {children}
     </ UserContext.Provider>
   )

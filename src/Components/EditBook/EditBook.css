@@ -10,6 +10,7 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 20px;
+  position: relative;
 
   img {
    height: 350px;
@@ -61,5 +62,23 @@
 
 
   }
+ }
+
+ .delete-bttn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+  border: none;
+  color: whitesmoke;
+  background-color: #a74f5b;
+ }
+
+ .delete-bttn:hover {
+  cursor: pointer;
+  background-color: #d7ccd0;
+  color: #a74f5b;
  }
 }

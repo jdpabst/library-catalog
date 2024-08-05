@@ -16,4 +16,5 @@ export type UserContextType = {
  setSelectedBook: any;
  updateBookInCatalog: any;
  addBookToCatalog: any;
+ deleteBookFromCatalog: any;
 }
