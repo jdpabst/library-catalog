@@ -11,10 +11,20 @@ export default function AddBook() {
  const [available, setAvailable] = useState(0);
  const [summary, setSummary] = useState('');
  const [cover, setCover] = useState('');
+ const [error, setError] = useState('');
 
- const navigate = useNavigate()
+ const navigate = useNavigate();
+
+ function handleError() {
+  setError('')
+ }
 
  async function addBook() {
+
+  if (!title || !author || !summary) {
+   setError('Title, author, and summary are required.');
+   return;
+  }
 
   try {
    const response = await axios.post(`http://localhost:3001/catalog/`, {
@@ -39,6 +49,10 @@ export default function AddBook() {
   <div className='add-book-main-container'>
    <div className='add-book-info-container'>
     <img src='/assets/book-placeholder.svg' />
+    {error && <div className="error">
+     <p>{error}</p>
+     <button onClick={handleError} className="error-bttn">x</button>
+    </div>}
     <form className='add-book-info' onSubmit={e => {
      e.preventDefault();
      addBook();

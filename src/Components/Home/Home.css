@@ -3,6 +3,8 @@
  font-optical-sizing: auto;
  font-weight: bold;
  font-style: normal;
+ background-color: #eae7e2;
+ height: 100%;
 
  .home-list {
   margin: 0 auto;
@@ -31,6 +33,7 @@
    .search-bttn {
     width: 100px;
    }
+
   }
 
   li {
@@ -53,6 +56,40 @@
     color: #2d3d54;
    }
 
+  }
+
+  .search-results-main-container {
+
+   .search-alt {
+    color: #2d3d54;
+   }
+
+   ul {
+    width: 80%;
+    list-style-type: none;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    img {
+     height: 200px;
+     /* filter: invert(20%) sepia(33%) saturate(642%) hue-rotate(176deg) brightness(96%) contrast(90%); */
+    }
+
+    img:hover {
+     cursor: pointer;
+     opacity: 50%;
+     /* filter: invert(44%) sepia(19%) saturate(677%) hue-rotate(153deg) brightness(96%) contrast(90%); */
+
+    }
+   }
   }
 
  }

@@ -10,6 +10,37 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 20px;
+  position: relative;
+
+  .error {
+   position: absolute;
+   top: 0;
+   left: 0;
+   color: whitesmoke;
+   background-color: #a74f5b;
+   height: 50px;
+   border-radius: 10px;
+   width: 100%;
+
+
+   .error-bttn {
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: #d7ccd0;
+    color: #a74f5b;
+   }
+
+   .error-bttn:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+   }
+
+  }
 
   img {
    height: 350px;
